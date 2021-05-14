@@ -1,4 +1,9 @@
 # Doecker Cheat Sheet
+
+This is a docker cheat sheet for everyone to use. Feel free to clone it or either use it for any usage.
+You can contibute with me to grow the cheat sheet for anyone who wants to start using a container ASAP.
+Of course, It's not a full docker documentation so you may want to refer to original repositories on hub.docker.com.
+
 ## CONTAINERS
 
 ###### kill all running containers
