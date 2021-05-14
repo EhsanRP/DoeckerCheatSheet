@@ -1,32 +1,65 @@
 # Doecker Cheat Sheet
------------------- CONTAINERS ------------------
+## CONTAINERS
 
-kill all running containers
+###### kill all running containers
+
+```
 docker kill $(docker ps -q)
+```
 
-delete all stopped docker containers
+###### delete all stopped docker containers
+
+```
 docker rm $(docker ps -a -q)
+```
 
------------------- IMAGES ------------------
+## IMAGES 
 
-remove a docker image
+###### remove a docker image
+
+```
 docker rmi <image name>
+```
 
-delete untagged images
+###### delete untagged images
+
+```
 docker rmi $(docker images -f dangling=true)
+```
 
-delete all images
+###### delete all images
+
+```
 docker rmi $(docker images -q)
+```
 
------------------- VOLUMES ------------------
+## VOLUMES
 
-remove all dangling volumes
+###### remove all dangling volumes
+
+```
 docker volume prune
+```
 
------------------- RUNNING ------------------
-postgres
+## RUNNING
+
+###### PostgreSQL Commands
+>Running On Default Mode
+
+```
 docker run --name todo-postgres -v c:\Users\ehsan\Desktop\postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+```
 
+>Running With Custom Directory
+
+```
 docker run --name postgres -e POSTGRES_PASSWORD=postgres -e PGDATA=/var/lib/postgresql/data/pgdata -v c:/users/ehsan/desktop/postgres:/var/lib/postgresql/data -p 7070:5432 -d postgres
+```
 
-docker run --name mongo -p 27017:27017 -d mongo
+###### MongoDB Commands
+
+>Running on Default Mode
+
+```
+docker run --name mongo -p 27017:27017 -d mongo 
+```
