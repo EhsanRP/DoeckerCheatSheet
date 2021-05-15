@@ -24,7 +24,7 @@ docker volume prune
 
 ------------------ RUNNING ------------------
 postgres
-docker run --name todo-postgres -v c:\Users\ehsan\Desktop\postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+docker run --name todo-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 
 docker run --name postgres -e POSTGRES_PASSWORD=postgres -e PGDATA=/var/lib/postgresql/data/pgdata -v c:/users/ehsan/desktop/postgres:/var/lib/postgresql/data -p 7070:5432 -d postgres
 
