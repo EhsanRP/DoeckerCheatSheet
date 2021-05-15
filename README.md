@@ -126,3 +126,27 @@ docker run --name postgres -e POSTGRES_PASSWORD=postgres -e PGDATA=/var/lib/post
 ```
 docker run --name mongo -p 27017:27017 -d mongo 
 ```
+
+###### MySQL Commands
+
+>Running on Default Mode and `tag` is the version you want
+
+```
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+```
+
+###### SQL Server Commands
+
+>Running on Default mode but specify the version based on image name
+
+```
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
+```
+
+###### RabbitMQ Commands
+
+>Running on Default mode
+
+```
+docker run -d --hostname my-rabbit -p 5672:5672 --name some-rabbit rabbitmq:3
+```
