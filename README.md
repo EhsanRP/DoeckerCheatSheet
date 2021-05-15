@@ -4,7 +4,7 @@ This is a docker cheat sheet for everyone to use. Feel free to clone it or eithe
 You can contibute with me to grow the cheat sheet for anyone who wants to start using a container ASAP.
 Of course, It's not a full docker documentation so you may want to refer to original repositories on hub.docker.com.
 
-## CONTAINERS
+## Managing CONTAINERS
 
 ###### Show a list of all running containers
 
@@ -48,7 +48,7 @@ docker rm $(docker ps -a -q)
 docker rm <CONTAINER>
 ```
 
-## IMAGES 
+## Managing IMAGES 
 
 ###### Show a list of all images
 
@@ -96,7 +96,7 @@ docker rmi $(docker images -f dangling=true)
 docker rmi $(docker images -q)
 ```
 
-## VOLUMES
+## Managing VOLUMES
 
 ###### Remove all dangling volumes
 
@@ -104,9 +104,10 @@ docker rmi $(docker images -q)
 docker volume prune
 ```
 
-## RUNNING
+## RUNNING Containers
 
 ###### PostgreSQL Commands
+
 >Running On Default Mode
 
 ```
