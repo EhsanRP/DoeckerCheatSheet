@@ -6,6 +6,30 @@ Of course, It's not a full docker documentation so you may want to refer to orig
 
 ## CONTAINERS
 
+###### Show a list of all running containers
+
+```
+docker ps
+```
+
+###### Show a list of all containers
+
+```
+docker ps -a
+```
+
+###### Running a container
+
+```
+docker run <CONTAINER>
+```
+
+###### Stopping a container
+
+```
+docker stop <CONTAINER>
+```
+
 ###### kill all running containers
 
 ```
@@ -18,7 +42,41 @@ docker kill $(docker ps -q)
 docker rm $(docker ps -a -q)
 ```
 
+###### Removing a specific container
+
+```
+docker rm <CONTAINER>
+```
+
 ## IMAGES 
+
+###### Show a list of all images
+
+```
+docker images
+```
+
+###### Show a list of dangling images
+
+```
+docker images prune
+```
+
+###### Saving an image into .Tar file
+
+```
+docker save <IMAGE> > <IMAGE.TAR>
+```
+>Example
+```
+docker save nginx > nginx.tar
+```
+
+###### Loading from an image file
+
+```
+docker load -i <TAR FILE>
+```
 
 ###### remove a docker image
 
@@ -26,13 +84,13 @@ docker rm $(docker ps -a -q)
 docker rmi <image name>
 ```
 
-###### delete untagged images
+###### Delete untagged images
 
 ```
 docker rmi $(docker images -f dangling=true)
 ```
 
-###### delete all images
+###### Delete all images
 
 ```
 docker rmi $(docker images -q)
@@ -40,7 +98,7 @@ docker rmi $(docker images -q)
 
 ## VOLUMES
 
-###### remove all dangling volumes
+###### Remove all dangling volumes
 
 ```
 docker volume prune
