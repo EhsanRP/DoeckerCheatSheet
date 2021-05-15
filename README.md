@@ -52,7 +52,7 @@ docker volume prune
 >Running On Default Mode
 
 ```
-docker run --name todo-postgres -v c:\Users\ehsan\Desktop\postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+docker run --name todo-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 ```
 
 >Running With Custom Directory
